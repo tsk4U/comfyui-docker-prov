@@ -12,12 +12,13 @@ PYTHON_PACKAGES=(
 
 NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
-    #"https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
-    #"https://github.com/ltdrdata/ComfyUI-Inspire-Pack.git"
-    #"https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
-    #"https://github.com/Gourieff/comfyui-reactor-node.git"
-    #"https://github.com/rgthree/rgthree-comfy.git"
-    #"https://github.com/giriss/comfy-image-saver.git"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
+    "https://github.com/ltdrdata/ComfyUI-Inspire-Pack.git"
+    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
+    "https://github.com/Gourieff/comfyui-reactor-node.git"
+    "https://github.com/rgthree/rgthree-comfy.git"
+    "https://github.com/giriss/comfy-image-saver.git"
+    "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"
 )
 
 CHECKPOINT_MODELS=(
