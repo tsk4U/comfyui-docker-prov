@@ -32,6 +32,7 @@ CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/351306?type=Model&format=SafeTensor&size=full&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806" #dreamshaperXL21_Turbo
     #"https://civitai.com/api/download/models/471120?type=Model&format=SafeTensor&size=full&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806" #Juggernaut_X_RunDiffusion
     "https://civitai.com/api/download/models/534642?type=Model&format=SafeTensor&size=full&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806" #PonyRealism 2.1 Main
+    "https://civitai.com/api/download/models/680915?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806" #CyberRealistic Pony v6.1
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
@@ -75,6 +76,10 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
 )
 
+EMBEDDINGS=(
+    "https://civitai.com/api/download/models/9208?type=Model&format=SafeTensor&size=full&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806" #EasyNegative
+)
+
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
@@ -99,6 +104,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/embeddings" \
+        "${EMBEDDINGS[@]}"
     provisioning_print_end
 }
 
