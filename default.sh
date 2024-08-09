@@ -23,7 +23,7 @@ NODES=(
     #"https://github.com/giriss/comfy-image-saver"
     #"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     #"https://github.com/storyicon/comfyui_segment_anything"
-    "https://github.com/twri/sdxl_prompt_styler"
+    #"https://github.com/twri/sdxl_prompt_styler"
 )
 
 CHECKPOINT_MODELS=(
