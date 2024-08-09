@@ -13,7 +13,7 @@ PYTHON_PACKAGES=(
 NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
-    #"https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
+    "https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
@@ -23,29 +23,22 @@ NODES=(
     #"https://github.com/giriss/comfy-image-saver"
     #"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     #"https://github.com/storyicon/comfyui_segment_anything"
-    #"https://github.com/twri/sdxl_prompt_styler"
+    "https://github.com/twri/sdxl_prompt_styler"
+    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+    "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
 )
 
 CHECKPOINT_MODELS=(
     #"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
-    #"https://civitai.com/api/download/models/372799?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806"
-    #"https://civitai.com/api/download/models/456194?type=Model&format=SafeTensor&size=full&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806"
-    "https://civitai.com/api/download/models/351306?type=Model&format=SafeTensor&size=full&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806" #dreamshaperXL21_Turbo
-    #"https://civitai.com/api/download/models/471120?type=Model&format=SafeTensor&size=full&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806" #Juggernaut_X_RunDiffusion
-    "https://civitai.com/api/download/models/534642?type=Model&format=SafeTensor&size=full&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806" #PonyRealism 2.1 Main
-    "https://civitai.com/api/download/models/680915?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806" #CyberRealistic Pony v6.1
+    "https://civitai.com/api/download/models/289591?type=Model&format=SafeTensor&size=full&fp=fp16&token=c8a0a37d25645dfe92bf8e2c174f1806" #Painters Checkpoint
+    "https://huggingface.co/stabilityai/sdxl-turbo/resolve/main/sd_xl_turbo_1.0_fp16.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
-    #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
+    "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
 )
 
 LORA_MODELS=(
-    #"https://civitai.com/api/download/models/16576"
-    "https://civitai.com/api/download/models/412357?type=Model&format=SafeTensor&token=c8a0a37d25645dfe92bf8e2c174f1806" #JACL_XL
-    "https://civitai.com/api/download/models/382152?type=Model&format=SafeTensor&token=c8a0a37d25645dfe92bf8e2c174f1806" #ExpressiveH
-    "https://civitai.com/api/download/models/471794?type=Model&format=SafeTensor&token=c8a0a37d25645dfe92bf8e2c174f1806" #Hands XL
-    "https://civitai.com/api/download/models/517898?type=Model&format=SafeTensor&token=c8a0a37d25645dfe92bf8e2c174f1806" #Penis Size Slider
-    "https://civitai.com/api/download/models/574538?type=Model&format=SafeTensor&token=c8a0a37d25645dfe92bf8e2c174f1806" #Miniature Girl
+    "https://civitai.com/api/download/models/376999?type=Model&format=SafeTensor&token=c8a0a37d25645dfe92bf8e2c174f1806" #Eldritch Palette Knife Painting
 )
 
 VAE_MODELS=(
@@ -55,8 +48,8 @@ VAE_MODELS=(
 )
 
 ESRGAN_MODELS=(
-    #"https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
-    #"https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
+    "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
+    "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
     "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
 )
 
