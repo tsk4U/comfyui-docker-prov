@@ -135,6 +135,10 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/insightface/models" \
         "${INSIGHTFACE[@]}"
+    extract_insightface_model \
+        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models"
+    provisioning_clip_vision \
+        "${WORKSPACE}/storage/stable_diffusion/models/clip_vision"
     provisioning_print_end
 }
 
@@ -185,6 +189,22 @@ function provisioning_get_models() {
         provisioning_download "${url}" "${dir}"
         printf "\n"
     done
+}
+
+function provisioning_clip_vision() {
+    dir="$1"
+    url="https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/image_encoder/model.safetensors"
+    mkdir -p "$dir"
+    shift
+    printf "Downloading: %s\n" "${url}"
+    provisioning_download "${url}" "${dir}"
+    printf "\n"
+    mv "${dir}/model.safetensors" "${dir}/CLIP-ViT-bigG-14-laion2B-39B-b160k.safetensors"
+}
+
+function extract_insightface_model() {
+    dir="$1"
+    unzip "${dir}/*.zip" -d "${dir}"
 }
 
 function provisioning_print_header() {
