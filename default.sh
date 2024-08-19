@@ -8,22 +8,27 @@
 
 PYTHON_PACKAGES=(
     "opencv-python==4.7.0.72"
+    "insightface"
+    "onnxruntime"
+    "onnxruntime-gpu"
 )
 
 NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
-    #"https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
+    "https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
     "https://github.com/huchenlei/ComfyUI-layerdiffuse"
-    "https://github.com/Gourieff/comfyui-reactor-node"
+    #"https://github.com/Gourieff/comfyui-reactor-node"
     "https://github.com/rgthree/rgthree-comfy"
     #"https://github.com/giriss/comfy-image-saver"
     #"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     #"https://github.com/storyicon/comfyui_segment_anything"
     "https://github.com/twri/sdxl_prompt_styler"
+    "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+    "https://github.com/cubiq/ComfyUI_InstantID"
 )
 
 CHECKPOINT_MODELS=(
@@ -46,6 +51,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/471794?type=Model&format=SafeTensor&token=c8a0a37d25645dfe92bf8e2c174f1806" #Hands XL
     "https://civitai.com/api/download/models/517898?type=Model&format=SafeTensor&token=c8a0a37d25645dfe92bf8e2c174f1806" #Penis Size Slider
     "https://civitai.com/api/download/models/574538?type=Model&format=SafeTensor&token=c8a0a37d25645dfe92bf8e2c174f1806" #Miniature Girl
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl_lora.safetensors"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl_lora.safetensors"
 )
 
 VAE_MODELS=(
@@ -78,6 +85,30 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_seg-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_sketch-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
+    "https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors"
+)
+
+CLIP_VISION=(
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors" #CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors
+)
+
+IPADAPTER=(
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors"
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus_sdxl_vit-h.safetensors"
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus_sdxl_vit-h.safetensors"
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus-face_sdxl_vit-h.safetensors"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl.bin"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl.bin"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-portrait_sdxl.bin"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-portrait_sdxl_unnorm.bin"
+)
+
+INSTANTID=(
+    "https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin"
+)
+
+INSIGHTFACE=(
+    "https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip"
 )
 
 EMBEDDINGS=(
@@ -111,6 +142,15 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/embeddings" \
         "${EMBEDDINGS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ipadapter" \
+        "${IPADAPTER[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/instantid" \
+        "${INSTANTID[@]}"
+    provisioning_get_clipvision \
+        "${WORKSPACE}/storage/stable_diffusion/models/clip_vision" \
+        "${CLIP_VISION[@]}"
     provisioning_print_end
 }
 
@@ -161,6 +201,23 @@ function provisioning_get_models() {
         provisioning_download "${url}" "${dir}"
         printf "\n"
     done
+}
+
+function provisioning_get_clipvision() {
+    if [[ -z $2 ]]; then return 1; fi
+    dir="$1"
+    mkdir -p "$dir"
+    shift
+
+    printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
+    for url in "${arr[@]}"; do
+        printf "Downloading: %s\n" "${url}"
+        provisioning_download "${url}" "${dir}"
+        printf "\n"
+    done
+
+    printf "Renaming %s to %s...\n" "$dir/model.safetensors" "$dir/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
+    mv "$dir/model.safetensors" "$dir/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
 }
 
 function provisioning_print_header() {
