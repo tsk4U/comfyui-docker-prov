@@ -49,6 +49,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
+    "https://civitai.com/api/download/models/646523?type=Model&format=SafeTensor&size=pruned&fp=fp16" #epiCRealism XL v8 KiSS
 )
 
 UNET_MODELS=(
@@ -62,6 +63,7 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/471794?type=Model&format=SafeTensor" #Hands XL
     "https://civitai.com/api/download/models/517898?type=Model&format=SafeTensor" #Penis Size Slider
     "https://civitai.com/api/download/models/574538?type=Model&format=SafeTensor" #Miniature Girl
+    "https://civitai.com/api/download/models/498843?type=Model&format=SafeTensor" #Real Cum
     "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl_lora.safetensors"
     "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl_lora.safetensors"
 )
