@@ -148,9 +148,16 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/instantid" \
         "${INSTANTID[@]}"
-    provisioning_get_clipvision \
+    provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/clip_vision" \
         "${CLIP_VISION[@]}"
+    rename_clip_vision \
+        "${WORKSPACE}/storage/stable_diffusion/models/clip_vision"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models" \
+        "${INSIGHTFACE[@]}"
+    extract_insightface_model \
+        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models"
     provisioning_print_end
 }
 
@@ -203,21 +210,16 @@ function provisioning_get_models() {
     done
 }
 
-function provisioning_get_clipvision() {
-    if [[ -z $2 ]]; then return 1; fi
+function rename_clip_vision() {
     dir="$1"
-    mkdir -p "$dir"
-    shift
-
-    printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
-    for url in "${arr[@]}"; do
-        printf "Downloading: %s\n" "${url}"
-        provisioning_download "${url}" "${dir}"
-        printf "\n"
-    done
 
     printf "Renaming %s to %s...\n" "$dir/model.safetensors" "$dir/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
     mv "$dir/model.safetensors" "$dir/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
+}
+
+function extract_insightface_model() {
+    dir="$1"
+    unzip "${dir}/*.zip" -d "${dir}"
 }
 
 function provisioning_print_header() {
