@@ -299,18 +299,21 @@ function provisioning_has_valid_civitai_token() {
 
 # Download from $1 URL to $2 file path
 function provisioning_download() {
+    url = "$1"
     if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
         auth_token="$HF_TOKEN"
         printf "Downloading from huggingface..."
     elif 
         [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        $1 = "$1?token=$CIVITAI_TOKEN"
+        auth_token="$CIVITAI_TOKEN"
+        url = "$url?token=$CIVITAI_TOKEN"
+        printf "Downloading from civitai..."
     fi
     if [[ -n $auth_token ]];then
         printf "Authorization: %s" "$auth_token"
-        wget --header="Authorization: Bearer $auth_token" -nc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+        wget --header="Authorization: Bearer $auth_token" -nc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$url"
     else
-        wget -nc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+        wget -nc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$url"
     fi
 }
 
