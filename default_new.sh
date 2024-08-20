@@ -42,14 +42,14 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
     #"https://civitai.com/api/download/models/372799?type=Model&format=SafeTensor&size=pruned&fp=fp16"
     #"https://civitai.com/api/download/models/456194?type=Model&format=SafeTensor&size=full&fp=fp16"
-    "https://civitai.com/api/download/models/351306?type=Model&format=SafeTensor&size=full&fp=fp16" #dreamshaperXL21_Turbo
+    "https://civitai.com/api/download/models/351306" #dreamshaperXL21_Turbo
     #"https://civitai.com/api/download/models/471120?type=Model&format=SafeTensor&size=full&fp=fp16" #Juggernaut_X_RunDiffusion
     #"https://civitai.com/api/download/models/534642?type=Model&format=SafeTensor&size=full&fp=fp16" #PonyRealism 2.1 Main
-    "https://civitai.com/api/download/models/680915?type=Model&format=SafeTensor&size=pruned&fp=fp16" #CyberRealistic Pony v6.1
+    "https://civitai.com/api/download/models/680915" #CyberRealistic Pony v6.1
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
-    "https://civitai.com/api/download/models/646523?type=Model&format=SafeTensor&size=pruned&fp=fp16" #epiCRealism XL v8 KiSS
+    "https://civitai.com/api/download/models/646523" #epiCRealism XL v8 KiSS
 )
 
 UNET_MODELS=(
@@ -58,12 +58,12 @@ UNET_MODELS=(
 
 LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
-    "https://civitai.com/api/download/models/412357?type=Model&format=SafeTensor" #JACL_XL
-    "https://civitai.com/api/download/models/382152?type=Model&format=SafeTensor" #ExpressiveH
-    "https://civitai.com/api/download/models/471794?type=Model&format=SafeTensor" #Hands XL
-    "https://civitai.com/api/download/models/517898?type=Model&format=SafeTensor" #Penis Size Slider
-    "https://civitai.com/api/download/models/574538?type=Model&format=SafeTensor" #Miniature Girl
-    "https://civitai.com/api/download/models/498843?type=Model&format=SafeTensor" #Real Cum
+    "https://civitai.com/api/download/models/412357" #JACL_XL
+    "https://civitai.com/api/download/models/382152" #ExpressiveH
+    "https://civitai.com/api/download/models/471794" #Hands XL
+    "https://civitai.com/api/download/models/517898" #Penis Size Slider
+    "https://civitai.com/api/download/models/574538" #Miniature Girl
+    "https://civitai.com/api/download/models/498843" #Real Cum
     "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl_lora.safetensors"
     "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl_lora.safetensors"
 )
@@ -102,7 +102,8 @@ CONTROLNET_MODELS=(
 )
 
 CLIP_VISION=(
-    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors" #CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors
+    #CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
 )
 
 IPADAPTER=(
@@ -219,13 +220,13 @@ function provisioning_get_nodes() {
 
 function rename_clip_vision() {
     dir="$1"
-
     printf "Renaming %s to %s...\n" "$dir/model.safetensors" "$dir/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
     mv "$dir/model.safetensors" "$dir/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
 }
 
 function extract_insightface_model() {
     dir="$1"
+    printf "Extracting insightface model..."
     unzip "${dir}/*.zip" -d "${dir}"
 }
 
@@ -300,16 +301,17 @@ function provisioning_has_valid_civitai_token() {
 function provisioning_download() {
     if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
         auth_token="$HF_TOKEN"
-        $url = "$1"
+        printf "Downloading from huggingface..."
     elif 
         [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        $url = "$1&token=$CIVITAI_TOKEN"
+        auth_token="$CIVITAI_TOKEN"
+        printf "Downloading from civitai..."
     fi
     if [[ -n $auth_token ]];then
         printf "Authorization: %s" "$auth_token"
-        wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$url"
+        wget --header="Authorization: Bearer $auth_token" -nc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     else
-        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$url"
+        wget -nc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     fi
 }
 
