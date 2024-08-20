@@ -304,8 +304,7 @@ function provisioning_download() {
         printf "Downloading from huggingface..."
     elif 
         [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        auth_token="$CIVITAI_TOKEN"
-        printf "Downloading from civitai..."
+        $1 = "$1?token=$CIVITAI_TOKEN"
     fi
     if [[ -n $auth_token ]];then
         printf "Authorization: %s" "$auth_token"
