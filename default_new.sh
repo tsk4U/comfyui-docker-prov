@@ -299,20 +299,20 @@ function provisioning_has_valid_civitai_token() {
 
 # Download from $1 URL to $2 file path
 function provisioning_download() {
-    url = "$1"
+    url="$1"
     if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
         auth_token="$HF_TOKEN"
         printf "Downloading from huggingface... \n"
     elif 
         [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        auth_token="$CIVITAI_TOKEN"
-        #$url = "$url?token=$CIVITAI_TOKEN"
+        #auth_token="$CIVITAI_TOKEN"
+        url="$url?token=$CIVITAI_TOKEN"
         printf "Downloading from civitai... $url \n"
     fi
     if [[ -n $auth_token ]];then
         printf "Authorization: %s" "$auth_token"
-        curl --output-dir "$2" -L -H "Content-Type: application/json" -H "Authorization: Bearer $auth_token" -O "$url"
-        #wget --header="Authorization: Bearer $auth_token" -nc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$url"
+        #curl --output-dir "$2" -L -H "Content-Type: application/json" -H "Authorization: Bearer $auth_token" -O "$url"
+        wget --header="Authorization: Bearer $auth_token" -nc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$url"
     else
         wget -nc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$url"
     fi
