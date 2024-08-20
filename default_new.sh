@@ -135,6 +135,7 @@ function provisioning_start() {
     source /opt/ai-dock/bin/venv-set.sh comfyui
 
     provisioning_print_header
+    provisioning_has_valid_civitai_token
     provisioning_get_apt_packages
     provisioning_get_nodes
     provisioning_get_pip_packages
@@ -305,7 +306,7 @@ function provisioning_download() {
         printf "Downloading from huggingface..."
     elif 
         [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        auth_token="$CIVITAI_TOKEN"
+        #auth_token="$CIVITAI_TOKEN"
         url = "$url?token=$CIVITAI_TOKEN"
         printf "Downloading from civitai..."
     fi
