@@ -42,7 +42,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
     #"https://civitai.com/api/download/models/372799?type=Model&format=SafeTensor&size=pruned&fp=fp16"
     #"https://civitai.com/api/download/models/456194?type=Model&format=SafeTensor&size=full&fp=fp16"
-    "https://civitai.com/api/download/models/351306" #dreamshaperXL21_Turbo
+    #"https://civitai.com/api/download/models/351306" #dreamshaperXL21_Turbo
     #"https://civitai.com/api/download/models/471120?type=Model&format=SafeTensor&size=full&fp=fp16" #Juggernaut_X_RunDiffusion
     #"https://civitai.com/api/download/models/534642?type=Model&format=SafeTensor&size=full&fp=fp16" #PonyRealism 2.1 Main
     "https://civitai.com/api/download/models/680915" #CyberRealistic Pony v6.1
@@ -51,6 +51,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
     #"https://civitai.com/api/download/models/646523" #epiCRealism XL v8 KiSS
     "https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
+    "https://civitai.com/api/download/models/708635" #LUSTIFY!
 )
 
 UNET_MODELS=(
