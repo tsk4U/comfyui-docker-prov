@@ -65,7 +65,7 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/135867" #DetailTweaker XL
     #"https://civitai.com/api/download/models/412357" #JACL_XL
     "https://civitai.com/api/download/models/382152" #ExpressiveH
-    "https://civitai.com/api/download/models/471794" #Hands XL
+    #"https://civitai.com/api/download/models/471794" #Hands XL
     #"https://civitai.com/api/download/models/517898" #Penis Size Slider
     #"https://civitai.com/api/download/models/574538" #Miniature Girl
     "https://civitai.com/api/download/models/498843" #Real Cum
