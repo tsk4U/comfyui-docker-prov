@@ -28,21 +28,21 @@ NODES=(
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
     "https://github.com/huchenlei/ComfyUI-layerdiffuse"
-    #"https://github.com/Gourieff/comfyui-reactor-node"
+    "https://github.com/Gourieff/comfyui-reactor-node"
     "https://github.com/rgthree/rgthree-comfy"
     #"https://github.com/giriss/comfy-image-saver"
     #"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     #"https://github.com/storyicon/comfyui_segment_anything"
     "https://github.com/twri/sdxl_prompt_styler"
-    #"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
-    #"https://github.com/cubiq/ComfyUI_InstantID"
+    "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+    "https://github.com/cubiq/ComfyUI_InstantID"
 )
 
 CHECKPOINT_MODELS=(
     #"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
     #"https://civitai.com/api/download/models/372799?type=Model&format=SafeTensor&size=pruned&fp=fp16"
     #"https://civitai.com/api/download/models/456194?type=Model&format=SafeTensor&size=full&fp=fp16"
-    #"https://civitai.com/api/download/models/351306" #dreamshaperXL21_Turbo
+    "https://civitai.com/api/download/models/351306" #dreamshaperXL21_Turbo
     #"https://civitai.com/api/download/models/471120?type=Model&format=SafeTensor&size=full&fp=fp16" #Juggernaut_X_RunDiffusion
     #"https://civitai.com/api/download/models/534642?type=Model&format=SafeTensor&size=full&fp=fp16" #PonyRealism 2.1 Main
     "https://civitai.com/api/download/models/680915" #CyberRealistic Pony v6.1
@@ -50,8 +50,8 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
     #"https://civitai.com/api/download/models/646523" #epiCRealism XL v8 KiSS
-    "https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
-    "https://civitai.com/api/download/models/708635" #LUSTIFY!
+    #"https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
+    #"https://civitai.com/api/download/models/708635" #LUSTIFY!
 )
 
 UNET_MODELS=(
@@ -60,18 +60,18 @@ UNET_MODELS=(
 
 LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
-    "https://civitai.com/api/download/models/535064" #Breast Size Slider XL
-    "https://civitai.com/api/download/models/660882" #Downblouse XL
+    #"https://civitai.com/api/download/models/535064" #Breast Size Slider XL
+    #"https://civitai.com/api/download/models/660882" #Downblouse XL
     "https://civitai.com/api/download/models/135867" #DetailTweaker XL
     #"https://civitai.com/api/download/models/412357" #JACL_XL
     "https://civitai.com/api/download/models/382152" #ExpressiveH
     "https://civitai.com/api/download/models/471794" #Hands XL
-    "https://civitai.com/api/download/models/517898" #Penis Size Slider
+    #"https://civitai.com/api/download/models/517898" #Penis Size Slider
     #"https://civitai.com/api/download/models/574538" #Miniature Girl
     "https://civitai.com/api/download/models/498843" #Real Cum
     "https://civitai.com/api/download/models/323435" #deep_penetration concept slider
-    #"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl_lora.safetensors"
-    #"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl_lora.safetensors"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl_lora.safetensors"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl_lora.safetensors"
 )
 
 VAE_MODELS=(
@@ -104,31 +104,31 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_seg-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_sketch-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
-    #"https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors"
+    "https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors"
 )
 
 CLIP_VISION=(
     #CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors
-    #"https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
 )
 
 IPADAPTER=(
-    #"https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors"
-    #"https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus_sdxl_vit-h.safetensors"
-    #"https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus_sdxl_vit-h.safetensors"
-    #"https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus-face_sdxl_vit-h.safetensors"
-    #"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl.bin"
-    #"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl.bin"
-    #"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-portrait_sdxl.bin"
-    #"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-portrait_sdxl_unnorm.bin"
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors"
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus_sdxl_vit-h.safetensors"
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus_sdxl_vit-h.safetensors"
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus-face_sdxl_vit-h.safetensors"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl.bin"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl.bin"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-portrait_sdxl.bin"
+    "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-portrait_sdxl_unnorm.bin"
 )
 
 INSTANTID=(
-    #"https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin"
+    "https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin"
 )
 
 INSIGHTFACE=(
-    #"https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip"
+    "https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip"
 )
 
 EMBEDDINGS=(
@@ -180,13 +180,13 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/clip_vision" \
         "${CLIP_VISION[@]}"
-    #rename_clip_vision \
-    #    "${WORKSPACE}/storage/stable_diffusion/models/clip_vision"
+    rename_clip_vision \
+        "${WORKSPACE}/storage/stable_diffusion/models/clip_vision"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/insightface/models" \
         "${INSIGHTFACE[@]}"
-    #extract_insightface_model \
-    #    "${WORKSPACE}/storage/stable_diffusion/models/insightface/models"
+    extract_insightface_model \
+        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models"
     provisioning_print_end
 }
 
