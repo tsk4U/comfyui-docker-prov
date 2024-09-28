@@ -27,18 +27,21 @@ NODES=(
     "https://github.com/WASasquatch/was-node-suite-comfyui"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
-    "https://github.com/huchenlei/ComfyUI-layerdiffuse"
+    #"https://github.com/huchenlei/ComfyUI-layerdiffuse"
     #"https://github.com/Gourieff/comfyui-reactor-node"
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
     "https://github.com/pythongosssss/ComfyUI-WD14-Tagger"
+    "https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
+    "https://github.com/crystian/ComfyUI-Crystools"
 )
 
 CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/471120?type=Model&format=SafeTensor&size=full&fp=fp16" #Juggernaut_X_RunDiffusion
     #"https://civitai.com/api/download/models/646523" #epiCRealism XL v8 KiSS
     "https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
+    "https://civitai.com/api/download/models/537505" #Cyberrealistic v5
 )
 
 UNET_MODELS=(
@@ -46,11 +49,12 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/122580?type=Model&format=SafeTensor" #Skin & Hands (male/female) from Polyhedron
-    "https://civitai.com/api/download/models/235392?type=Model&format=SafeTensor" #Big Dick DanD - Huge white penis
-    "https://civitai.com/api/download/models/183382?type=Model&format=SafeTensor" #POV Missionary Vaginal + Creampie LoRA
-    "https://civitai.com/api/download/models/321969?type=Model&format=SafeTensor" #PornMaster-颜射，內射，精液滴下，精液，肛交後，做愛後-bukkake,creampie,cumdrip,cum,after anal,after sex
-    "https://civitai.com/api/download/models/724959?type=Model&format=SafeTensor" #Blowjob Top of Head POV Lora
+    "https://civitai.com/api/download/models/122580" #Skin & Hands (male/female) from Polyhedron
+    "https://civitai.com/api/download/models/235392" #Big Dick DanD - Huge white penis
+    "https://civitai.com/api/download/models/183382" #POV Missionary Vaginal + Creampie LoRA
+    "https://civitai.com/api/download/models/321969" #PornMaster-颜射，內射，精液滴下，精液，肛交後，做愛後-bukkake,creampie,cumdrip,cum,after anal,after sex
+    "https://civitai.com/api/download/models/724959" #Blowjob Top of Head POV Lora
+    "https://civitai.com/api/download/models/87153" #Add More Details - Detail Enhancer / Tweaker (细节调整) LoRA
 )
 
 VAE_MODELS=(
@@ -91,7 +95,7 @@ CONTROLNET_MODELS=(
 EMBEDDINGS=(
     "https://civitai.com/api/download/models/77169" #BadDream
     "https://civitai.com/api/download/models/77173" #UnrealisticDream
-    #"https://civitai.com/api/download/models/82745" #Cyberrealistic Neg
+    "https://civitai.com/api/download/models/82745" #Cyberrealistic Neg
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
