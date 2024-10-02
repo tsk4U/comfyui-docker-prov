@@ -44,14 +44,16 @@ NODES=(
     "https://github.com/cubiq/ComfyUI_FaceAnalysis"
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/kijai/ComfyUI-Florence2"
+    "https://github.com/kijai/ComfyUI-SUPIR"
 )
 
 CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/351306" #dreamshaperXL21_Turbo
     "https://civitai.com/api/download/models/680915" #CyberRealistic Pony v6.1
     #"https://civitai.com/api/download/models/646523" #epiCRealism XL v8 KiSS
-    "https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
+    #"https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
     "https://civitai.com/api/download/models/537505" #Cyberrealistic v5
+    "https://huggingface.co/Kijai/SUPIR_pruned/resolve/main/SUPIR-v0F_fp16.safetensors"
 )
 
 UNET_MODELS=(
