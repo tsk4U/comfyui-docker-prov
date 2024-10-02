@@ -30,12 +30,16 @@ NODES=(
     "https://github.com/huchenlei/ComfyUI-layerdiffuse"
     "https://github.com/Gourieff/comfyui-reactor-node"
     "https://github.com/rgthree/rgthree-comfy"
-    #"https://github.com/giriss/comfy-image-saver"
     #"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     #"https://github.com/storyicon/comfyui_segment_anything"
-    "https://github.com/twri/sdxl_prompt_styler"
+    #"https://github.com/twri/sdxl_prompt_styler"
     #"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
     #"https://github.com/cubiq/ComfyUI_InstantID"
+    "https://github.com/Fannovel16/comfyui_controlnet_aux"
+    "https://github.com/pythongosssss/ComfyUI-WD14-Tagger"
+    "https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
+    "https://github.com/crystian/ComfyUI-Crystools"
+    "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
 )
 
 CHECKPOINT_MODELS=(

@@ -15,7 +15,7 @@ APT_PACKAGES=(
 
 PIP_PACKAGES=(
     "insightface"
-    "onnxruntime"
+    #"onnxruntime"
     "onnxruntime-gpu"
     "diffusers"
 )
@@ -41,22 +41,17 @@ NODES=(
     "https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
+    "https://github.com/cubiq/ComfyUI_FaceAnalysis"
+    "https://github.com/kijai/ComfyUI-KJNodes"
+    "https://github.com/kijai/ComfyUI-Florence2"
 )
 
 CHECKPOINT_MODELS=(
-    #"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
-    #"https://civitai.com/api/download/models/372799?type=Model&format=SafeTensor&size=pruned&fp=fp16"
-    #"https://civitai.com/api/download/models/456194?type=Model&format=SafeTensor&size=full&fp=fp16"
     "https://civitai.com/api/download/models/351306" #dreamshaperXL21_Turbo
-    #"https://civitai.com/api/download/models/471120?type=Model&format=SafeTensor&size=full&fp=fp16" #Juggernaut_X_RunDiffusion
-    #"https://civitai.com/api/download/models/534642?type=Model&format=SafeTensor&size=full&fp=fp16" #PonyRealism 2.1 Main
     "https://civitai.com/api/download/models/680915" #CyberRealistic Pony v6.1
-    #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
-    #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
-    #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
     #"https://civitai.com/api/download/models/646523" #epiCRealism XL v8 KiSS
-    #"https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
-    #"https://civitai.com/api/download/models/708635" #LUSTIFY!
+    "https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
+    "https://civitai.com/api/download/models/537505" #Cyberrealistic v5
 )
 
 UNET_MODELS=(
@@ -64,17 +59,13 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    #"https://civitai.com/api/download/models/16576"
-    #"https://civitai.com/api/download/models/535064" #Breast Size Slider XL
-    #"https://civitai.com/api/download/models/660882" #Downblouse XL
+    "https://civitai.com/api/download/models/535064" #Breast Size Slider XL
+    "https://civitai.com/api/download/models/660882" #Downblouse XL
     "https://civitai.com/api/download/models/135867" #DetailTweaker XL
     #"https://civitai.com/api/download/models/412357" #JACL_XL
     "https://civitai.com/api/download/models/382152" #ExpressiveH
-    #"https://civitai.com/api/download/models/471794" #Hands XL
-    #"https://civitai.com/api/download/models/517898" #Penis Size Slider
-    #"https://civitai.com/api/download/models/574538" #Miniature Girl
-    "https://civitai.com/api/download/models/498843" #Real Cum
-    "https://civitai.com/api/download/models/323435" #deep_penetration concept slider
+    "https://civitai.com/api/download/models/471794" #Hands XL
+    "https://civitai.com/api/download/models/843758" #Hanging Breasts
     "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl_lora.safetensors"
     "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl_lora.safetensors"
 )
@@ -86,7 +77,7 @@ VAE_MODELS=(
 )
 
 ESRGAN_MODELS=(
-    #"https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
+    "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
     #"https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
     "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
 )
@@ -110,6 +101,14 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_sketch-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
     "https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors"
+    "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11f1p_sd15_depth_fp16.safetensors"
+    "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_lineart_fp16.safetensors"
+    "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_openpose_fp16.safetensors"
+    "https://huggingface.co/CrucibleAI/ControlNetMediaPipeFace/resolve/main/control_v2p_sd15_mediapipe_face.safetensors"
+    "https://civitai.com/api/download/models/267507" #XL Depth
+    "https://civitai.com/api/download/models/267516" #XL Lineart
+    "https://civitai.com/api/download/models/267540" #XL Openpose
+
 )
 
 CLIP_VISION=(

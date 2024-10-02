@@ -16,7 +16,7 @@ APT_PACKAGES=(
 PIP_PACKAGES=(
     "insightface"
     "onnxruntime"
-    "onnxruntime-gpu"
+    #"onnxruntime-gpu"
     "diffusers"
 )
 
@@ -35,6 +35,7 @@ NODES=(
     "https://github.com/pythongosssss/ComfyUI-WD14-Tagger"
     "https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
     "https://github.com/crystian/ComfyUI-Crystools"
+    "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
 )
 
 CHECKPOINT_MODELS=(
@@ -55,6 +56,9 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/321969" #PornMaster-颜射，內射，精液滴下，精液，肛交後，做愛後-bukkake,creampie,cumdrip,cum,after anal,after sex
     "https://civitai.com/api/download/models/724959" #Blowjob Top of Head POV Lora
     "https://civitai.com/api/download/models/87153" #Add More Details - Detail Enhancer / Tweaker (细节调整) LoRA
+    "https://civitai.com/api/download/models/91915" #JK Perfect Boobs
+    "https://civitai.com/api/download/models/28699" #JK Big Natural Breasts Type01 [Lite]
+    "https://civitai.com/api/download/models/8162" #That's My Bush!
 )
 
 VAE_MODELS=(
@@ -89,6 +93,8 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
     #"https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors"
     "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11f1p_sd15_depth_fp16.safetensors"
+    "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_lineart_fp16.safetensors"
+    "https://huggingface.co/CrucibleAI/ControlNetMediaPipeFace/resolve/main/control_v2p_sd15_mediapipe_face.safetensors"
 
 )
 
