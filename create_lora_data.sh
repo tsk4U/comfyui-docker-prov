@@ -41,10 +41,11 @@ NODES=(
     "https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
-    "https://github.com/cubiq/ComfyUI_FaceAnalysis"
+    #"https://github.com/cubiq/ComfyUI_FaceAnalysis"
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/kijai/ComfyUI-Florence2"
     "https://github.com/kijai/ComfyUI-SUPIR"
+    "https://github.com/Smirnov75/ComfyUI-mxToolkit"
 )
 
 CHECKPOINT_MODELS=(

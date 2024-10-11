@@ -16,7 +16,7 @@ APT_PACKAGES=(
 PIP_PACKAGES=(
     "insightface"
     "onnxruntime"
-    "onnxruntime-gpu"
+    #"onnxruntime-gpu"
     "diffusers"
 )
 
@@ -40,6 +40,8 @@ NODES=(
     "https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
+    "https://github.com/john-mnz/ComfyUI-Inspyrenet-Rembg"
+    "https://github.com/tsk4U/ComfyUI-TSKNodes"
 )
 
 CHECKPOINT_MODELS=(
@@ -56,6 +58,7 @@ CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/646523" #epiCRealism XL v8 KiSS
     #"https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
     #"https://civitai.com/api/download/models/708635" #LUSTIFY!
+    "https://civitai.com/api/download/models/537505" #Cyberrealistic v5
 )
 
 UNET_MODELS=(
@@ -63,23 +66,31 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    #"https://civitai.com/api/download/models/16576"
+    ### XL
     #"https://civitai.com/api/download/models/535064" #Breast Size Slider XL
     #"https://civitai.com/api/download/models/660882" #Downblouse XL
-    "https://civitai.com/api/download/models/135867" #DetailTweaker XL
+    #"https://civitai.com/api/download/models/135867" #DetailTweaker XL
     #"https://civitai.com/api/download/models/412357" #JACL_XL
-    "https://civitai.com/api/download/models/382152" #ExpressiveH
     #"https://civitai.com/api/download/models/471794" #Hands XL
-    #"https://civitai.com/api/download/models/517898" #Penis Size Slider
-    #"https://civitai.com/api/download/models/574538" #Miniature Girl
     "https://civitai.com/api/download/models/498843" #Real Cum
+    #"https://civitai.com/api/download/models/691212" #Cinematic Kodak Motion Picture "Film Still" Style XL
+    "https://civitai.com/api/download/models/708206" #lipbit XL
+
+    ### PONY
+    "https://civitai.com/api/download/models/382152" #ExpressiveH
+    "https://civitai.com/api/download/models/517898" #Penis Size Slider
+    #"https://civitai.com/api/download/models/574538" #Miniature Girl
     "https://civitai.com/api/download/models/323435" #deep_penetration concept slider
     "https://civitai.com/api/download/models/511834" #upright straddle
     "https://civitai.com/api/download/models/594186" #cowgirl looking down
-    "https://civitai.com/api/download/models/691212" #Cinematic Kodak Motion Picture "Film Still" Style XL
-    "https://civitai.com/api/download/models/708206" #lipbit XL
-    #"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl_lora.safetensors"
-    #"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl_lora.safetensors"
+    "https://civitai.com/api/download/models/539041" #Pubic Hair Slider - Pony/SDXL
+    "https://civitai.com/api/download/models/498516" #[LoRA] Groping
+
+    ### 1.5
+    "https://civitai.com/api/download/models/245073" #RealDownblouse - Downblouse & Nipslip LoRA
+    "https://civitai.com/api/download/models/283467" #Cum Facial 55
+    "https://civitai.com/api/download/models/235392" #Big Dick DanD - Huge white penis
+    "https://civitai.com/api/download/models/25633" #concept Excessive pubic hair
 )
 
 VAE_MODELS=(
