@@ -27,13 +27,13 @@ NODES=(
     "https://github.com/WASasquatch/was-node-suite-comfyui"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
-    "https://github.com/huchenlei/ComfyUI-layerdiffuse"
+    #"https://github.com/huchenlei/ComfyUI-layerdiffuse"
     "https://github.com/Gourieff/comfyui-reactor-node"
     "https://github.com/rgthree/rgthree-comfy"
     #"https://github.com/giriss/comfy-image-saver"
     #"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     #"https://github.com/storyicon/comfyui_segment_anything"
-    "https://github.com/twri/sdxl_prompt_styler"
+    #"https://github.com/twri/sdxl_prompt_styler"
     "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
     "https://github.com/cubiq/ComfyUI_InstantID"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
@@ -41,6 +41,8 @@ NODES=(
     "https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
+    "https://github.com/kijai/ComfyUI-SUPIR"
+    "https://github.com/tsk4U/ComfyUI-TSKNodes"
 )
 
 CHECKPOINT_MODELS=(
@@ -50,13 +52,14 @@ CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/351306" #dreamshaperXL21_Turbo
     #"https://civitai.com/api/download/models/471120?type=Model&format=SafeTensor&size=full&fp=fp16" #Juggernaut_X_RunDiffusion
     #"https://civitai.com/api/download/models/534642?type=Model&format=SafeTensor&size=full&fp=fp16" #PonyRealism 2.1 Main
-    "https://civitai.com/api/download/models/680915" #CyberRealistic Pony v6.1
+    #"https://civitai.com/api/download/models/680915" #CyberRealistic Pony v6.1
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
     #"https://civitai.com/api/download/models/646523" #epiCRealism XL v8 KiSS
     #"https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
     #"https://civitai.com/api/download/models/708635" #LUSTIFY!
+    "https://huggingface.co/Kijai/SUPIR_pruned/resolve/main/SUPIR-v0F_fp16.safetensors" #SUPIR Model
 )
 
 UNET_MODELS=(
@@ -69,12 +72,12 @@ LORA_MODELS=(
     #"https://civitai.com/api/download/models/660882" #Downblouse XL
     "https://civitai.com/api/download/models/135867" #DetailTweaker XL
     #"https://civitai.com/api/download/models/412357" #JACL_XL
-    "https://civitai.com/api/download/models/382152" #ExpressiveH
-    #"https://civitai.com/api/download/models/471794" #Hands XL
+    #"https://civitai.com/api/download/models/382152" #ExpressiveH
+    "https://civitai.com/api/download/models/471794" #Hands XL
     #"https://civitai.com/api/download/models/517898" #Penis Size Slider
     #"https://civitai.com/api/download/models/574538" #Miniature Girl
-    "https://civitai.com/api/download/models/498843" #Real Cum
-    "https://civitai.com/api/download/models/323435" #deep_penetration concept slider
+    #"https://civitai.com/api/download/models/498843" #Real Cum
+    #"https://civitai.com/api/download/models/323435" #deep_penetration concept slider
     "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl_lora.safetensors"
     "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl_lora.safetensors"
 )
