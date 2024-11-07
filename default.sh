@@ -50,15 +50,17 @@ CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/351306" #dreamshaperXL21_Turbo
     #"https://civitai.com/api/download/models/471120?type=Model&format=SafeTensor&size=full&fp=fp16" #Juggernaut_X_RunDiffusion
     #"https://civitai.com/api/download/models/534642?type=Model&format=SafeTensor&size=full&fp=fp16" #PonyRealism 2.1 Main
-    "https://civitai.com/api/download/models/680915" #CyberRealistic Pony v6.1
+    #"https://civitai.com/api/download/models/680915" #CyberRealistic Pony v6.1
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
     #"https://civitai.com/api/download/models/646523" #epiCRealism XL v8 KiSS
     #"https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
     #"https://civitai.com/api/download/models/708635" #LUSTIFY!
-    "https://civitai.com/api/download/models/537505" #Cyberrealistic v5
-    "https://civitai.com/api/download/models/789646" #RealVisXL V5.0
+    #"https://civitai.com/api/download/models/537505" #Cyberrealistic v5
+    #"https://civitai.com/api/download/models/789646" #RealVisXL V5.0
+    "https://civitai.com/api/download/models/905362" #GODDESS of Realism (Pony)
+    "https://civitai.com/api/download/models/272376" #picX real
 )
 
 UNET_MODELS=(

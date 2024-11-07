@@ -37,12 +37,14 @@ NODES=(
     "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
     "https://github.com/cubiq/ComfyUI_InstantID"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
-    "https://github.com/pythongosssss/ComfyUI-WD14-Tagger"
+    #"https://github.com/pythongosssss/ComfyUI-WD14-Tagger"
     "https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
     "https://github.com/kijai/ComfyUI-SUPIR"
     "https://github.com/tsk4U/ComfyUI-TSKNodes"
+    "https://github.com/kijai/ComfyUI-KJNodes"
+    "https://github.com/cubiq/PuLID_ComfyUI"
 )
 
 CHECKPOINT_MODELS=(
@@ -59,6 +61,8 @@ CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/646523" #epiCRealism XL v8 KiSS
     #"https://civitai.com/api/download/models/130072" #realisticVision V6 5.1
     #"https://civitai.com/api/download/models/708635" #LUSTIFY!
+    "https://civitai.com/api/download/models/905362" #GODDESS of Realism (Pony)
+    "https://civitai.com/api/download/models/272376" #picX real
     "https://huggingface.co/Kijai/SUPIR_pruned/resolve/main/SUPIR-v0F_fp16.safetensors" #SUPIR Model
 )
 
@@ -68,16 +72,18 @@ UNET_MODELS=(
 
 LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
-    #"https://civitai.com/api/download/models/535064" #Breast Size Slider XL
+    "https://civitai.com/api/download/models/535064" #Breast Size Slider XL
     #"https://civitai.com/api/download/models/660882" #Downblouse XL
     "https://civitai.com/api/download/models/135867" #DetailTweaker XL
     #"https://civitai.com/api/download/models/412357" #JACL_XL
-    #"https://civitai.com/api/download/models/382152" #ExpressiveH
+    "https://civitai.com/api/download/models/382152" #ExpressiveH
     "https://civitai.com/api/download/models/471794" #Hands XL
-    #"https://civitai.com/api/download/models/517898" #Penis Size Slider
+    "https://civitai.com/api/download/models/517898" #Penis Size Slider
     #"https://civitai.com/api/download/models/574538" #Miniature Girl
-    #"https://civitai.com/api/download/models/498843" #Real Cum
-    #"https://civitai.com/api/download/models/323435" #deep_penetration concept slider
+    "https://civitai.com/api/download/models/498843" #Real Cum
+    "https://civitai.com/api/download/models/323435" #deep_penetration concept slider
+    "https://civitai.com/api/download/models/717403" #[Style/PonyRealism] Pony Amateur
+    "https://civitai.com/api/download/models/602224" #HDA_CowgirlPositionXL
     "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl_lora.safetensors"
     "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl_lora.safetensors"
 )
@@ -140,9 +146,9 @@ INSIGHTFACE=(
 )
 
 EMBEDDINGS=(
-    "https://civitai.com/api/download/models/77169" #BadDream
-    "https://civitai.com/api/download/models/77173" #UnrealisticDream
-    "https://civitai.com/api/download/models/82745" #Cyberrealistic Neg
+    #"https://civitai.com/api/download/models/77169" #BadDream
+    #"https://civitai.com/api/download/models/77173" #UnrealisticDream
+    #"https://civitai.com/api/download/models/82745" #Cyberrealistic Neg
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
