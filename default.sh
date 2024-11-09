@@ -81,13 +81,15 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/382152" #ExpressiveH
     "https://civitai.com/api/download/models/517898" #Penis Size Slider
     #"https://civitai.com/api/download/models/574538" #Miniature Girl
-    #"https://civitai.com/api/download/models/323435" #deep_penetration concept slider
+    "https://civitai.com/api/download/models/323435" #deep_penetration concept slider
     #"https://civitai.com/api/download/models/511834" #upright straddle
     #"https://civitai.com/api/download/models/594186" #cowgirl looking down
     "https://civitai.com/api/download/models/539041" #Pubic Hair Slider - Pony/SDXL
     "https://civitai.com/api/download/models/498516" #[LoRA] Groping
     "https://civitai.com/api/download/models/623811" #Oppai / Large breasts slim body
     "https://civitai.com/api/download/models/691212" #Cinematic Kodak Motion Picture "Film Still" Style XL
+    "https://civitai.com/api/download/models/1006037" #80s Babes Pony
+    "https://civitai.com/api/download/models/717403" #[Style/PonyRealism] Pony Amateur
 
     ### 1.5
     #"https://civitai.com/api/download/models/245073" #RealDownblouse - Downblouse & Nipslip LoRA
@@ -157,6 +159,13 @@ EMBEDDINGS=(
     "https://civitai.com/api/download/models/77169" #BadDream
     "https://civitai.com/api/download/models/77173" #UnrealisticDream
     "https://civitai.com/api/download/models/82745" #Cyberrealistic Neg
+    "https://civitai.com/api/download/models/854648" #HDA_MissionaryXL
+    "https://civitai.com/api/download/models/523119" #HDA_AllFours-fellatioXL
+    "https://civitai.com/api/download/models/512628" #HDA_FellatioXL
+    "https://civitai.com/api/download/models/900006" #HDA_AfterSexXL (Vaginal)
+    "https://civitai.com/api/download/models/506364" #HDA_ReadyforSexXL
+    "https://civitai.com/api/download/models/951180" #HDA_BondageOutfitXL
+    "https://civitai.com/api/download/models/602224" #HDA_CowgirlPositionXL
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
