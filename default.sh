@@ -28,7 +28,7 @@ NODES=(
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
     "https://github.com/huchenlei/ComfyUI-layerdiffuse"
-    "https://github.com/Gourieff/comfyui-reactor-node"
+    #"https://github.com/Gourieff/comfyui-reactor-node"
     "https://github.com/rgthree/rgthree-comfy"
     #"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     #"https://github.com/storyicon/comfyui_segment_anything"
@@ -43,6 +43,7 @@ NODES=(
     "https://github.com/john-mnz/ComfyUI-Inspyrenet-Rembg"
     "https://github.com/tsk4U/ComfyUI-TSKNodes"
     "https://github.com/kijai/ComfyUI-KJNodes"
+    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
 )
 
 CHECKPOINT_MODELS=(
