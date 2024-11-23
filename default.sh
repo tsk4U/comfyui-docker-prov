@@ -36,7 +36,7 @@ NODES=(
     #"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
     #"https://github.com/cubiq/ComfyUI_InstantID"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
-    "https://github.com/pythongosssss/ComfyUI-WD14-Tagger"
+    #"https://github.com/pythongosssss/ComfyUI-WD14-Tagger"
     "https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
@@ -44,6 +44,7 @@ NODES=(
     "https://github.com/tsk4U/ComfyUI-TSKNodes"
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+    "https://github.com/ciri/comfyui-model-downloader"
 )
 
 CHECKPOINT_MODELS=(
@@ -83,13 +84,13 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/517898" #Penis Size Slider
     #"https://civitai.com/api/download/models/574538" #Miniature Girl
     "https://civitai.com/api/download/models/323435" #deep_penetration concept slider
-    #"https://civitai.com/api/download/models/511834" #upright straddle
+    "https://civitai.com/api/download/models/511834" #upright straddle
     #"https://civitai.com/api/download/models/594186" #cowgirl looking down
     "https://civitai.com/api/download/models/539041" #Pubic Hair Slider - Pony/SDXL
     "https://civitai.com/api/download/models/498516" #[LoRA] Groping
     "https://civitai.com/api/download/models/623811" #Oppai / Large breasts slim body
-    "https://civitai.com/api/download/models/691212" #Cinematic Kodak Motion Picture "Film Still" Style XL
-    "https://civitai.com/api/download/models/1006037" #80s Babes Pony
+    #"https://civitai.com/api/download/models/691212" #Cinematic Kodak Motion Picture "Film Still" Style XL
+    #"https://civitai.com/api/download/models/1006037" #80s Babes Pony
     "https://civitai.com/api/download/models/717403" #[Style/PonyRealism] Pony Amateur
 
     ### 1.5
@@ -167,6 +168,11 @@ EMBEDDINGS=(
     "https://civitai.com/api/download/models/506364" #HDA_ReadyforSexXL
     "https://civitai.com/api/download/models/951180" #HDA_BondageOutfitXL
     "https://civitai.com/api/download/models/602224" #HDA_CowgirlPositionXL
+    "https://civitai.com/api/download/models/720175" #zPDXL3
+    "https://civitai.com/api/download/models/380277" #zPDXLxxx
+    "https://civitai.com/api/download/models/380277?type=Negative&format=Other" #zPDXLxxx-neg
+    "https://civitai.com/api/download/models/482268" #zPDXLrl
+    "https://civitai.com/api/download/models/482268?type=Negative&format=Other" #zPDXLrl-neg
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
