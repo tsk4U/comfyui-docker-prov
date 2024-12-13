@@ -27,7 +27,7 @@ NODES=(
     "https://github.com/WASasquatch/was-node-suite-comfyui"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
-    "https://github.com/huchenlei/ComfyUI-layerdiffuse"
+    #"https://github.com/huchenlei/ComfyUI-layerdiffuse"
     #"https://github.com/Gourieff/comfyui-reactor-node"
     "https://github.com/rgthree/rgthree-comfy"
     #"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
@@ -85,12 +85,12 @@ LORA_MODELS=(
     #"https://civitai.com/api/download/models/574538" #Miniature Girl
     "https://civitai.com/api/download/models/323435" #deep_penetration concept slider
     "https://civitai.com/api/download/models/511834" #upright straddle
-    #"https://civitai.com/api/download/models/594186" #cowgirl looking down
+    "https://civitai.com/api/download/models/594186" #cowgirl looking down
     "https://civitai.com/api/download/models/539041" #Pubic Hair Slider - Pony/SDXL
     "https://civitai.com/api/download/models/498516" #[LoRA] Groping
     "https://civitai.com/api/download/models/623811" #Oppai / Large breasts slim body
-    #"https://civitai.com/api/download/models/691212" #Cinematic Kodak Motion Picture "Film Still" Style XL
-    #"https://civitai.com/api/download/models/1006037" #80s Babes Pony
+    "https://civitai.com/api/download/models/691212" #Cinematic Kodak Motion Picture "Film Still" Style XL
+    "https://civitai.com/api/download/models/1006037" #80s Babes Pony
     "https://civitai.com/api/download/models/717403" #[Style/PonyRealism] Pony Amateur
 
     ### 1.5
