@@ -14,15 +14,23 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
-    #"diffusers"
+    #"insightface"
+    #"onnxruntime"
 )
 
 NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
-    "https://github.com/WASasquatch/was-node-suite-comfyui"
+    "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/sipie800/ComfyUI-PuLID-Flux-Enhanced"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    "https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
-    "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+    "https://github.com/PowerHouseMan/ComfyUI-AdvancedLivePortrait"
+    "https://github.com/Fannovel16/comfyui_controlnet_aux"
+    "https://github.com/WASasquatch/was-node-suite-comfyui"
+    "https://github.com/kijai/ComfyUI-KJNodes"
 )
 
 CHECKPOINT_MODELS=(
@@ -30,13 +38,16 @@ CHECKPOINT_MODELS=(
 
 CLIP_MODELS=(
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
-    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+    #"https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+    "https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
 )
 
 UNET_MODELS=(
+    "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux1-dev-fp8-e4m3fn.safetensors"
 )
 
 VAE_MODELS=(
+    "https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors"
 )
 
 LORA_MODELS=(
@@ -49,6 +60,15 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+    "https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Union/resolve/main/diffusion_pytorch_model.safetensors"
+)
+
+INSIGHTFACE=(
+    "https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip"
+)
+
+PULID=(
+    "https://huggingface.co/guozinan/PuLID/resolve/main/pulid_flux_v0.9.0.safetensors"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
@@ -96,6 +116,14 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models" \
+        "${INSIGHTFACE[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/pulid" \
+        "${PULID[@]}"
+    extract_insightface_model \
+        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models"
     provisioning_print_end
 }
 
@@ -164,6 +192,12 @@ function provisioning_get_models() {
         provisioning_download "${url}" "${dir}"
         printf "\n"
     done
+}
+
+function extract_insightface_model() {
+    dir="$1"
+    printf "Extracting insightface model..."
+    unzip "${dir}/*.zip" -d "${dir}"
 }
 
 function provisioning_print_header() {
